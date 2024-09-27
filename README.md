@@ -24,6 +24,7 @@ $ cd gitlab-reviewer
 ### Install dependencies
 
 ```shell
+$ yum install yarnpkg
 $ yarn
 ```
 
@@ -32,6 +33,9 @@ $ yarn
 After configuration, you have to build the code and launch the server.
 
 ```shell
+$ export NODE_OPTIONS=--openssl-legacy-provider
+## 或者是修改package.json里面的内容，"start": "set NODE_OPTIONS=--openssl-legacy-provider & yarn run watch:css & react-scripts start"
+
 $ yarn start
 ```
 
