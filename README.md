@@ -23,6 +23,27 @@ $ cd gitlab-reviewer
 
 ### Install dependencies
 ### 安装gitlab， https://blog.csdn.net/qq_31237581/article/details/102639749
+### 修改默认密码https://blog.csdn.net/qq_35002542/article/details/129590962 
+### gitlab容器化启动官方文档https://gitlab.com/gitlab-org/omnibus-gitlab/-/blob/11-11-stable/doc/docker/README.md
+
+```shell
+podman run --detach \
+  --hostname 192.168.200.129 \
+  --publish 443:443 --publish 80:80 --publish 8022:22 \
+  --name gitlab \
+  --privileged=true \
+  --restart always \
+  --volume /root/gitlab/config:/etc/gitlab:Z \
+  --volume /root/gitlab/logs:/var/log/gitlab:Z \
+  --volume /root/gitlab/data:/var/opt/gitlab:Z \
+  quay.io/redhattraining/gitlab-ce:8.4.3-ce.0
+
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --zone=public --add-port=8022/tcp --permanent
+firewall-cmd --reload
+```
+
 ```shell
 $ vim /etc/yum.repos.d/gitlab-ce.repo
 [gitlab-ce]
