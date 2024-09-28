@@ -12,14 +12,7 @@ UI to see all GitLab merge requests of your team in one place.
 
 * [GitLab](https://about.gitlab.com/)
 
-## Installation
 
-### Clone the project
-
-```shell
-$ git clone https://github.com/Akollade/gitlab-reviewer.git
-$ cd gitlab-reviewer
-```
 
 ### Install dependencies
 ### 安装gitlab， https://blog.csdn.net/qq_31237581/article/details/102639749
@@ -55,6 +48,15 @@ Enabled=1
 Gpgkey=https://packages.gitlab.com/gpg.key
 
 $ sudo yum install gitlab-ce -y
+```
+
+## Installation
+
+### Clone the project
+
+```shell
+$ git clone https://github.com/Akollade/gitlab-reviewer.git
+$ cd gitlab-reviewer
 ```
 
 ```shell
