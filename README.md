@@ -22,6 +22,19 @@ $ cd gitlab-reviewer
 ```
 
 ### Install dependencies
+### 安装gitlab， https://blog.csdn.net/qq_31237581/article/details/102639749
+```shell
+$ vim /etc/yum.repos.d/gitlab-ce.repo
+[gitlab-ce]
+name=gitlab-ce
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7
+gpgcheck=0
+Repo_gpgcheck=0
+Enabled=1
+Gpgkey=https://packages.gitlab.com/gpg.key
+
+$ sudo yum install gitlab-ce -y
+```
 
 ```shell
 $ yum install yarnpkg
