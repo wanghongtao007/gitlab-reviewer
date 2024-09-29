@@ -49,6 +49,8 @@ Gpgkey=https://packages.gitlab.com/gpg.key
 
 $ sudo yum install gitlab-ce -y
 ```
+###创建一个MergeRequest。 https://www.cnblogs.com/liwutao/p/11647092.html
+####
 
 ## Installation
 
