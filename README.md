@@ -57,7 +57,7 @@ $ sudo yum install gitlab-ce -y
 ### Clone the project
 
 ```shell
-$ git clone https://github.com/Akollade/gitlab-reviewer.git
+$ git clone https://github.com/wanghongtao007/gitlab-reviewer.git
 $ cd gitlab-reviewer
 ```
 
