@@ -46,9 +46,11 @@ $ yarn start
 Then open `http://localhost:3000` in your browser.
 
 ## build the container
-podman build --network host -t docker.io/library/gitlab-reviewer .
-podman run -it docker.io/library/gitlab-reviewer
+```shell
+$ podman build --network host -t docker.io/library/gitlab-reviewer .
 
+$podman run -it docker.io/library/gitlab-reviewer
+```
 
 ### Inspiration
 
