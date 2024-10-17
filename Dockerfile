@@ -14,13 +14,16 @@ ADD yarn.repo /etc/yum.repos.d/
 COPY . /gitlab-reviewer/
 #RUN curl -O -L https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-x64.tar.xz
 
-RUN yum install -y  yarn
+RUN yum install -y  yarn 
 RUN yum install -y xz
 RUN cd /gitlab-reviewer && tar -xvf node-v20.18.0-linux-x64.tar.xz && cd node-v20.18.0-linux-x64/bin && rm -fr /usr/bin/node && cp  node /usr/bin/node && rm -fr /usr/bin/npm && cp -f npm /usr/bin/npm && rm -fr /usr/bin/npx && cp -f npx /usr/bin/npx
 
-RUN cd /gitlab-reviewer && pwd && ls && yarn
+RUN cd /gitlab-reviewer && yarn
 WORKDIR /gitlab-reviewer
 
-RUN export NODE_OPTIONS=--openssl-legacy-provider
+#RUN export NODE_OPTIONS=--openssl-legacy-provider
+#RUN echo "export NODE_OPTIONS=--openssl-legacy-provider" | tee -a  /etc/profile
+#RUN source /etc/profile
+
 CMD ["/usr/bin/yarn","start"]
 #CMD ["sleep 360000"]
